@@ -1,6 +1,7 @@
 package com.yauhescha.hibernate;
 
 
+import com.yauhescha.hibernate.entity.Role;
 import com.yauhescha.hibernate.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -26,6 +27,7 @@ public class HibernateRunner {
                     .lastname("Push")
                     .birthDate(LocalDate.of(2000, 1, 30))
                     .age(20)
+                    .role(Role.ADMIN)
                     .build();
             session.save(user);
             session.getTransaction().commit();
