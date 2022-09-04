@@ -14,7 +14,7 @@ public class HibernateRunner {
         Configuration configuration = new Configuration();
         configuration.configure();
         // if nothing in hibernate.cfg.xml
-//        configuration.addAnnotatedClass(User.class);
+        // configuration.addAnnotatedClass(User.class);
 
         try (SessionFactory factory = configuration.buildSessionFactory();
              Session session = factory.openSession();) {
